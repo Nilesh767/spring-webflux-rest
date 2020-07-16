@@ -40,7 +40,7 @@ class CategoryControllerTest {
         BDDMockito.given(categoryRepository.findById("someId"))
                 .willReturn(Mono.just(builder().description("cat1").build()));
 
-        webTestClient.get().uri("/api/v1/category/someId")
+        webTestClient.get().uri("/api/v1/categories/someId")
                 .exchange()
                 .expectBody(Category.class);
     }

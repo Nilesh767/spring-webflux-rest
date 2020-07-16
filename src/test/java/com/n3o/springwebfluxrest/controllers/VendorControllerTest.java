@@ -39,7 +39,7 @@ class VendorControllerTest {
         BDDMockito.given(vendorRepository.findById("someId"))
                 .willReturn(Mono.just(Vendor.builder().firstName("cat1").lastName("bdvwbe").build()));
 
-        webTestClient.get().uri("/api/v1/vendor/someId")
+        webTestClient.get().uri("/api/v1/vendors/someId")
                 .exchange()
                 .expectBody(Vendor.class);
     }
