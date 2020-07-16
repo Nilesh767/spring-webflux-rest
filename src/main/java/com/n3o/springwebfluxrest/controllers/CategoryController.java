@@ -21,7 +21,7 @@ public class CategoryController {
         return categoryRepository.findAll();
     }
 
-    @GetMapping("/api/v1/category/{id}")
+    @GetMapping("/api/v1/categories/{id}")
     Mono<Category> getById(@PathVariable String id){
         return categoryRepository.findById(id);
     }
